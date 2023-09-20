@@ -31,16 +31,26 @@ const TaskForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(
-      addTask({
-        ...task,
-        id: uuid(),
-        completed: false,
-      })
-    );
+    if (params.id) {
+      dispatch(editTask(task));
+    } else {
+      dispatch(
+        addTask({
+          ...task,
+          id: uuid(),
+          completed: false,
+        })
+      );
+    }
 
     navigate("/");
   };
+
+  useEffect(() => {
+    if (params.id) {
+      setTask(allTasks.find((task) => task.id === params.id));
+    }
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>

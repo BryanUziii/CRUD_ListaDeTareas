@@ -22,6 +22,16 @@ export const taskSlice = createSlice({
     addTask: (state, action) => {
       state.push(action.payload);
     },
+    editTask: (state, action) => {
+      const { id, tittle, description } = action.payload;
+
+      const taskFound = state.find((task) => task.id === id);
+
+      if (taskFound) {
+        taskFound.tittle = tittle;
+        taskFound.description = description;
+      }
+    },
     deleteTask: (state, action) => {
       const taskFound = state.find((task) => task.id === action.payload);
       if (taskFound) {

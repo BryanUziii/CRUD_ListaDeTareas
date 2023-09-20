@@ -26,7 +26,11 @@ const TasksList = () => {
           <div key={task.id}>
             <h3>{task.tittle}</h3>
             <p>{task.description}</p>
-
+            <Link to={`/editTask/${task.id}`}>
+              <Button color="primary" variant="contained">
+                Editar
+              </Button>
+            </Link>
             <Button
               color="secondary"
               variant="contained"
