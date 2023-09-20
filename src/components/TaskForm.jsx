@@ -6,6 +6,9 @@ import { addTask, editTask } from "../features/tasks/taskSlice";
 import { v4 as uuid } from "uuid";
 import { useNavigate, useParams } from "react-router-dom";
 
+import "../styles/TaskForm.css";
+import { Button, TextField, withStyles } from "@material-ui/core";
+
 const TaskForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -53,23 +56,32 @@ const TaskForm = () => {
   }, []);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="tittle"
-        placeholder="tittle"
-        value={tittle}
-        onChange={handleChange}
-      />
+    <form onSubmit={handleSubmit} className="divForm">
+      <div className="divFormContent">
+        <TextField
+          type="text"
+          name="tittle"
+          variant="filled"
+          label="tittle"
+          value={tittle}
+          onChange={handleChange}
+        />
 
-      <textarea
-        name="description"
-        placeholder="description"
-        value={description}
-        onChange={handleChange}
-      />
+        <TextField
+          type="text"
+          name="description"
+          variant="filled"
+          label="description"
+          multiline
+          rows={4}
+          value={description}
+          onChange={handleChange}
+        />
 
-      <button>save</button>
+        <Button color="primary" variant="contained" type="submit">
+          Guardar
+        </Button>
+      </div>
     </form>
   );
 };

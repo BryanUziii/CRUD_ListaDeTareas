@@ -27,9 +27,9 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <Container style={{ display: "grid", placeItems: "center" }}>
+      <>
         <RouterProvider router={router} />
-      </Container>
+      </>
     </>
   );
 };

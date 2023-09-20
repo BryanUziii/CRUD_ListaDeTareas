@@ -1,0 +1,85 @@
+.divMostrarTareas {
+  display: grid !important;
+  place-items: center;
+
+  padding: 0px 10px !important;
+}
+
+.divMostrarTareasContent {
+  width: 100%;
+  padding: 10px;
+}
+
+.divMostrarTareasContent .btnAgregar {
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: snow;
+  background-color: #00e931;
+}
+
+.divMostrarTareasContent .btnAgregar:hover {
+  background-color: #009820;
+}
+
+.divCrearTask {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 8px;
+}
+.divCrearTask button {
+  margin: 10px;
+}
+
+.divAllTasks {
+  /* background-color: #000; */
+  margin-top: 10px;
+}
+
+.divTask {
+  background-color: #333;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
+
+.divTask h3 {
+  padding: 10px;
+  border-bottom: 0.5px solid rgba(255, 250, 250, 0.1);
+  text-align: justify;
+}
+
+.divTask p {
+  padding: 10px;
+  max-width: 100vw;
+  border-bottom: 0.5px solid rgba(255, 250, 250, 0.1);
+}
+
+.divTask .divBotones {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.divTask .divBotones button {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.divBotones .btnEditar {
+  background-color: dodgerblue;
+  color: snow;
+}
+
+.divBotones .btnEditar:hover {
+  background-color: #134e95;
+}
+
+.divBotones .btnEliminar {
+  background-color: rgb(255, 0, 0);
+  color: snow;
+}
+
+.divBotones .btnEliminar:hover {
+  background-color: #920a0a;
+}

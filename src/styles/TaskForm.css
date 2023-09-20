@@ -1,0 +1,17 @@
+.divForm {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.divFormContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #33333371;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.425);
+}
+
+.divFormContent > div {
+  margin: 10px;
+}
